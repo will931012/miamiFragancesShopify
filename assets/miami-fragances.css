@@ -6,6 +6,8 @@
   --miami-paper: #f7f7f8;
   --miami-white: #ffffff;
   --miami-red: #e4202e;
+  --miami-aqua: #17d2d0;
+  --miami-sky: #2f7bff;
 }
 
 body {
@@ -50,6 +52,17 @@ h1, h2, h3, h4, h5, h6,
   opacity: 1 !important;
 }
 
+#header-component,
+#header-component .header__row {
+  background-color: var(--miami-black) !important;
+}
+
+#header-component.header[transparent],
+#header-component.header[transparent] .header__row {
+  background-color: var(--miami-black) !important;
+  --header-bg-color: var(--miami-black) !important;
+}
+
 .header-section svg,
 .header-section svg path,
 .header-section svg circle,
@@ -83,6 +96,17 @@ button.button:hover {
 
 .hero .section-background::after {
   background: linear-gradient(110deg, rgba(0, 0, 0, 0.72) 15%, rgba(0, 0, 0, 0.42) 52%, rgba(228, 32, 46, 0.2) 100%);
+}
+
+.hero .section-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40rem 22rem at 8% 10%, rgba(47, 123, 255, 0.2), transparent 65%),
+    radial-gradient(32rem 20rem at 92% 86%, rgba(23, 210, 208, 0.2), transparent 68%);
+  animation: miamiGlow 12s ease-in-out infinite alternate;
 }
 
 .hero h1 {
@@ -269,6 +293,83 @@ form input:focus-visible {
   color: rgba(255, 255, 255, 0.65) !important;
 }
 
+main[data-template*='index'] {
+  background:
+    radial-gradient(38rem 26rem at 0% 0%, rgba(47, 123, 255, 0.08), transparent 65%),
+    radial-gradient(34rem 24rem at 100% 100%, rgba(23, 210, 208, 0.08), transparent 65%),
+    var(--miami-paper);
+}
+
+main[data-template*='index'] > .shopify-section {
+  animation: miamiReveal 0.7s ease both;
+}
+
+main[data-template*='index'] > .shopify-section:nth-child(2) { animation-delay: 0.05s; }
+main[data-template*='index'] > .shopify-section:nth-child(3) { animation-delay: 0.1s; }
+main[data-template*='index'] > .shopify-section:nth-child(4) { animation-delay: 0.15s; }
+main[data-template*='index'] > .shopify-section:nth-child(5) { animation-delay: 0.2s; }
+
+[id*='__promo_strip'] ul,
+[id*='__offer_tiles'] ul,
+[id*='__why_choose'] ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+[id*='__promo_strip'] li {
+  border: 1px solid #e5e7ed;
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  background: #fff;
+}
+
+[id*='__why_choose'] li,
+[id*='__offer_tiles'] li {
+  border: 1px solid #e5e5ea;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+[id*='__testimonials'] p {
+  border: 1px solid #e5e5ea;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.95rem 1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes miamiReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes miamiGlow {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.04) translate3d(0, -8px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .section-background::before,
+  main[data-template*='index'] > .shopify-section {
+    animation: none !important;
+  }
+}
+
 @media screen and (max-width: 989px) {
   .miami-promo-strip,
   .miami-offer-tiles,
@@ -277,6 +378,12 @@ form input:focus-visible {
   }
 
   .miami-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  [id*='__promo_strip'] ul,
+  [id*='__offer_tiles'] ul,
+  [id*='__why_choose'] ul {
     grid-template-columns: 1fr;
   }
 }
