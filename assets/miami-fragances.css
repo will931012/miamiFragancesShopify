@@ -126,6 +126,36 @@ button.button:hover {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
+.product-card .card-gallery {
+  --gallery-aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f2f3f6;
+}
+
+.product-card .product-media-container,
+.product-card .product-media,
+.product-card .product-media__image {
+  height: 100%;
+  width: 100%;
+}
+
+.product-card .product-media__image {
+  object-fit: cover;
+}
+
+.product-card product-title {
+  min-height: 2.8em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.product-card .price {
+  margin-top: 0.1rem;
+}
+
 .product-card:hover .product-card__content {
   transform: translateY(-3px);
   border-color: rgba(228, 32, 46, 0.3);

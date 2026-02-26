@@ -193,7 +193,7 @@
             "product-card-gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "adapt",
+                "image_ratio": "portrait",
                 "border": "none"
               }
             },
@@ -286,7 +286,7 @@
               "type": "_collection-card-image",
               "static": true,
               "settings": {
-                "image_ratio": "adapt"
+                "image_ratio": "portrait"
               }
             },
             "collection-title": {
@@ -376,7 +376,7 @@
             "product-card-gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "adapt",
+                "image_ratio": "portrait",
                 "border": "none"
               }
             },
