@@ -258,6 +258,17 @@ form input:focus-visible {
   opacity: 1 !important;
 }
 
+.shopify-section-group-footer-group input,
+.shopify-section-group-footer-group textarea {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.shopify-section-group-footer-group input::placeholder,
+.shopify-section-group-footer-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
 @media screen and (max-width: 989px) {
   .miami-promo-strip,
   .miami-offer-tiles,
