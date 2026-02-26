@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --miami-ivory: #f8f3eb;
+  --miami-sand: #e7d8c4;
+  --miami-gold: #b7925c;
+  --miami-teal: #0e3d46;
+  --miami-charcoal: #1f2125;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--miami-charcoal);
+  background: radial-gradient(circle at top right, #fff8f0 0%, #f8f3eb 52%, #f5ede1 100%);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.01em;
+}
+
+.button,
+button.button {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.button:hover,
+button.button:hover {
+  transform: translateY(-1px);
+}
+
+.header-section,
+.shopify-section-group-footer-group .section-background {
+  backdrop-filter: blur(8px);
+}
+
+.hero .jumbo-text {
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.miami-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.miami-feature-card {
+  border: 1px solid rgba(31, 33, 37, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 14px;
+}
+
+.miami-feature-card strong {
+  display: block;
+  color: var(--miami-teal);
+  margin-bottom: 4px;
+}
+
+.miami-testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.miami-testimonial {
+  border: 1px solid rgba(31, 33, 37, 0.08);
+  border-radius: 14px;
+  padding: 16px;
+  background: linear-gradient(155deg, #ffffff 0%, #fbf7f1 100%);
+}
+
+.miami-product-trust {
+  border: 1px solid rgba(14, 61, 70, 0.2);
+  border-radius: 14px;
+  background: #f4ece0;
+  padding: 14px;
+}
+
+.miami-product-trust p {
+  margin: 0 0 8px;
+}
+
+.miami-trust-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.miami-trust-list li {
+  margin-bottom: 6px;
+}
+
+@media screen and (max-width: 989px) {
+  .miami-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .miami-testimonials {
+    grid-template-columns: 1fr;
+  }
+}
