@@ -104,7 +104,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Shop Best Sellers",
-                    "link": "shopify://collections/all",
+                    "link": "/collections/all",
                     "style_class": "button"
                   }
                 },
@@ -112,7 +112,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Explore Collections",
-                    "link": "shopify://collections",
+                    "link": "/collections/all",
                     "style_class": "button-secondary"
                   }
                 }
@@ -481,7 +481,7 @@
               "type": "button",
               "settings": {
                 "label": "About Miami Fragances",
-                "link": "/pages/about",
+                "link": "/collections/all",
                 "style_class": "link"
               }
             }
@@ -631,7 +631,7 @@
         "offer_text": {
           "type": "text",
           "settings": {
-            "text": "<div class='miami-offer-tiles'><a class='miami-offer-tile' href='/collections/all'><span>Bundle & Save</span><strong>Buy 2, Save 15%</strong></a><a class='miami-offer-tile' href='/collections/gift-sets'><span>Gift Sets</span><strong>Luxury Picks Under $99</strong></a><a class='miami-offer-tile' href='/collections/best-sellers'><span>Top Rated</span><strong>Customer Favorites</strong></a></div>",
+            "text": "<div class='miami-offer-tiles'><a class='miami-offer-tile' href='/collections/all'><span>Bundle & Save</span><strong>Buy 2, Save 15%</strong></a><a class='miami-offer-tile' href='/collections/all'><span>Gift Sets</span><strong>Luxury Picks Under $99</strong></a><a class='miami-offer-tile' href='/collections/all'><span>Top Rated</span><strong>Customer Favorites</strong></a></div>",
             "type_preset": "rte",
             "alignment": "center",
             "width": "100%"
