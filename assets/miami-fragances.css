@@ -25,10 +25,38 @@ h1, h2, h3, h4, h5, h6,
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
+.shopify-section-group-header-group .section-background,
+.shopify-section-group-header-group {
+  background: var(--miami-black) !important;
+}
+
 .header-section a,
 .header-section .button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.header-section,
+.header-section a,
+.header-section button,
+.header-section .icon,
+.header-section .link,
+.header-section .menu-link,
+.header-section .header__heading-link,
+.shopify-section-group-header-group,
+.shopify-section-group-header-group a,
+.shopify-section-group-header-group button {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.header-section svg,
+.header-section svg path,
+.header-section svg circle,
+.shopify-section-group-header-group svg,
+.shopify-section-group-header-group svg path,
+.shopify-section-group-header-group svg circle {
+  stroke: #ffffff !important;
 }
 
 .button,
@@ -223,6 +251,11 @@ form input:focus-visible {
 .shopify-section-group-footer-group h2,
 .shopify-section-group-footer-group h3 {
   color: rgba(255, 255, 255, 0.92);
+}
+
+.shopify-section-group-footer-group * {
+  color: rgba(255, 255, 255, 0.92) !important;
+  opacity: 1 !important;
 }
 
 @media screen and (max-width: 989px) {
