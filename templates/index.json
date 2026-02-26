@@ -8,6 +8,37 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "main": {
+      "type": "section",
+      "blocks": {
+        "welcome": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Welcome to Miami Fragances</h2>",
+            "type_preset": "h3",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "welcome"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "background_media": "none",
+        "border": "none",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
