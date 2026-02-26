@@ -1,62 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --miami-ivory: #f8f3eb;
-  --miami-sand: #e7d8c4;
-  --miami-gold: #b7925c;
-  --miami-teal: #0e3d46;
-  --miami-charcoal: #1f2125;
+  --miami-night: #090a0f;
+  --miami-ink: #131521;
+  --miami-paper: #f7f7f8;
+  --miami-white: #ffffff;
+  --miami-aqua: #43ead5;
+  --miami-coral: #ff6f7f;
+  --miami-sunset: #ffb45f;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
-  color: var(--miami-charcoal);
-  background: radial-gradient(circle at top right, #fff8f0 0%, #f8f3eb 52%, #f5ede1 100%);
+  font-family: 'Outfit', sans-serif;
+  color: var(--miami-ink);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(67, 234, 213, 0.11), transparent 36%),
+    radial-gradient(circle at 100% 100%, rgba(255, 111, 127, 0.1), transparent 34%),
+    var(--miami-paper);
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 0.01em;
+  font-family: 'DM Serif Display', serif;
+  letter-spacing: 0.015em;
+}
+
+.header-section {
+  background: rgba(9, 10, 15, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.header-section a,
+.header-section .button {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .button,
 button.button {
-  border-radius: 999px;
-  font-weight: 600;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .button:hover,
 button.button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(9, 10, 15, 0.2);
+  filter: saturate(1.06);
 }
 
-.header-section,
-.shopify-section-group-footer-group .section-background {
-  backdrop-filter: blur(8px);
+.button-secondary {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+  background: transparent;
 }
 
-.hero .jumbo-text {
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.hero .section-background::after {
+  background:
+    linear-gradient(112deg, rgba(9, 10, 15, 0.78) 10%, rgba(9, 10, 15, 0.42) 48%, rgba(255, 111, 127, 0.22) 100%);
+}
+
+.hero h1 {
+  text-shadow: 0 16px 40px rgba(0, 0, 0, 0.38);
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.product-card__content {
+  background: var(--miami-white);
+  border: 1px solid rgba(9, 10, 15, 0.1);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 10px 24px rgba(9, 10, 15, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.product-card:hover .product-card__content {
+  transform: translateY(-4px);
+  border-color: rgba(67, 234, 213, 0.5);
+  box-shadow: 0 16px 36px rgba(9, 10, 15, 0.14);
+}
+
+.product-card .price {
+  font-weight: 700;
+  color: var(--miami-night);
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.collection-card,
+.collection-link,
+.collection-card__content {
+  border-radius: 16px;
+}
+
+.collection-card {
+  overflow: hidden;
+  border: 1px solid rgba(9, 10, 15, 0.1);
+  box-shadow: 0 12px 30px rgba(9, 10, 15, 0.08);
+}
+
+.collection-card:hover {
+  box-shadow: 0 16px 40px rgba(9, 10, 15, 0.14);
 }
 
 .miami-feature-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 14px;
 }
 
 .miami-feature-card {
-  border: 1px solid rgba(31, 33, 37, 0.08);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 14px;
+  border: 1px solid rgba(9, 10, 15, 0.12);
+  border-radius: 12px;
+  background: linear-gradient(150deg, #ffffff 0%, #f6f7f8 100%);
+  padding: 16px;
 }
 
 .miami-feature-card strong {
   display: block;
-  color: var(--miami-teal);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  color: var(--miami-night);
 }
 
 .miami-testimonials {
@@ -66,16 +139,18 @@ button.button:hover {
 }
 
 .miami-testimonial {
-  border: 1px solid rgba(31, 33, 37, 0.08);
-  border-radius: 14px;
-  padding: 16px;
-  background: linear-gradient(155deg, #ffffff 0%, #fbf7f1 100%);
+  border: 1px solid rgba(9, 10, 15, 0.14);
+  border-radius: 12px;
+  padding: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9)),
+    linear-gradient(120deg, rgba(67, 234, 213, 0.12), rgba(255, 111, 127, 0.12));
 }
 
 .miami-product-trust {
-  border: 1px solid rgba(14, 61, 70, 0.2);
-  border-radius: 14px;
-  background: #f4ece0;
+  border: 1px solid rgba(9, 10, 15, 0.14);
+  border-radius: 12px;
+  background: linear-gradient(160deg, #fefefe 0%, #f2f6f6 100%);
   padding: 14px;
 }
 
@@ -92,6 +167,32 @@ button.button:hover {
   margin-bottom: 6px;
 }
 
+form input[type='email'],
+form input[type='text'],
+form input[type='search'] {
+  border-radius: 999px;
+  border: 1px solid rgba(9, 10, 15, 0.2);
+  background: #fff;
+}
+
+form input:focus-visible {
+  outline: 2px solid rgba(67, 234, 213, 0.42);
+  outline-offset: 1px;
+}
+
+.shopify-section-group-footer-group .section-background {
+  background:
+    linear-gradient(180deg, #0d0f16 0%, #07080d 100%);
+}
+
+.shopify-section-group-footer-group,
+.shopify-section-group-footer-group a,
+.shopify-section-group-footer-group p,
+.shopify-section-group-footer-group h2,
+.shopify-section-group-footer-group h3 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 @media screen and (max-width: 989px) {
   .miami-feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -99,5 +200,17 @@ button.button:hover {
 
   .miami-testimonials {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .header-section a,
+  .header-section .button {
+    letter-spacing: 0.04em;
+  }
+
+  .product-card__content {
+    border-radius: 12px;
+    padding: 10px;
   }
 }
