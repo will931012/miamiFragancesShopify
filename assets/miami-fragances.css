@@ -113,6 +113,72 @@ button.button:hover {
   box-shadow: 0 16px 40px rgba(9, 10, 15, 0.14);
 }
 
+.miami-promo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.miami-promo-item {
+  border-radius: 10px;
+  border: 1px solid rgba(9, 10, 15, 0.12);
+  background:
+    linear-gradient(120deg, rgba(67, 234, 213, 0.12), rgba(255, 111, 127, 0.12)),
+    #fff;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.miami-promo-item strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.miami-promo-item span {
+  font-size: 0.86rem;
+}
+
+.miami-offer-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.miami-offer-tile {
+  display: block;
+  text-decoration: none;
+  border-radius: 14px;
+  border: 1px solid rgba(9, 10, 15, 0.12);
+  padding: 18px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(67, 234, 213, 0.22), transparent 40%),
+    radial-gradient(circle at 0% 100%, rgba(255, 111, 127, 0.18), transparent 44%),
+    #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.miami-offer-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(9, 10, 15, 0.14);
+}
+
+.miami-offer-tile span {
+  display: block;
+  color: rgba(9, 10, 15, 0.72);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
+}
+
+.miami-offer-tile strong {
+  color: var(--miami-night);
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
 .miami-feature-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -194,6 +260,8 @@ form input:focus-visible {
 }
 
 @media screen and (max-width: 989px) {
+  .miami-promo-strip,
+  .miami-offer-tiles,
   .miami-feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -204,6 +272,11 @@ form input:focus-visible {
 }
 
 @media screen and (max-width: 749px) {
+  .miami-promo-strip,
+  .miami-offer-tiles {
+    grid-template-columns: 1fr;
+  }
+
   .header-section a,
   .header-section .button {
     letter-spacing: 0.04em;

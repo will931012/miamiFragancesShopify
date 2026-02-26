@@ -1,5 +1,32 @@
 {
   "sections": {
+    "promo_strip": {
+      "type": "section",
+      "blocks": {
+        "promo_text": {
+          "type": "text",
+          "settings": {
+            "text": "<div class='miami-promo-strip'><div class='miami-promo-item'><strong>FREE SHIPPING</strong><span>On U.S. orders over $75</span></div><div class='miami-promo-item'><strong>NEW DROPS WEEKLY</strong><span>Limited fragrances and gift sets</span></div><div class='miami-promo-item'><strong>BUY NOW PAY LATER</strong><span>Flexible payment options at checkout</span></div></div>",
+            "type_preset": "rte",
+            "alignment": "center",
+            "width": "100%"
+          }
+        }
+      },
+      "block_order": ["promo_text"],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 8,
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "background_media": "none",
+        "border": "none",
+        "padding-block-start": 10,
+        "padding-block-end": 10
+      }
+    },
     "hero_miami": {
       "type": "hero",
       "blocks": {
@@ -113,6 +140,106 @@
         "gradient_direction": "to bottom",
         "padding-block-start": 48,
         "padding-block-end": 56
+      }
+    },
+    "new_arrivals": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "gap": 12,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "inherit_color_scheme": true,
+            "background_media": "none",
+            "border": "none"
+          },
+          "blocks": {
+            "product_list_text": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>New Arrivals</h2>",
+                "type_preset": "h4",
+                "alignment": "left"
+              }
+            },
+            "product_list_button": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "Shop new",
+                "style_class": "link"
+              }
+            }
+          },
+          "block_order": ["product_list_text", "product_list_button"]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 8,
+            "inherit_color_scheme": true,
+            "border": "none",
+            "padding-block-end": 4
+          },
+          "blocks": {
+            "product-card-gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt",
+                "border": "none"
+              }
+            },
+            "product_title": {
+              "type": "product-title",
+              "settings": {
+                "width": "100%",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font_size": "1rem",
+                "padding-block-start": 4
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left"
+              }
+            }
+          },
+          "block_order": ["product-card-gallery", "product_title", "price"]
+        }
+      },
+      "block_order": [],
+      "settings": {
+        "collection": "all",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 4,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 16,
+        "rows_gap": 22,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 22,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 30,
+        "padding-block-end": 36
       }
     },
     "collections_miami": {
@@ -497,15 +624,45 @@
         "padding-block-start": 52,
         "padding-block-end": 56
       }
+    },
+    "offer_tiles": {
+      "type": "section",
+      "blocks": {
+        "offer_text": {
+          "type": "text",
+          "settings": {
+            "text": "<div class='miami-offer-tiles'><a class='miami-offer-tile' href='/collections/all'><span>Bundle & Save</span><strong>Buy 2, Save 15%</strong></a><a class='miami-offer-tile' href='/collections/gift-sets'><span>Gift Sets</span><strong>Luxury Picks Under $99</strong></a><a class='miami-offer-tile' href='/collections/best-sellers'><span>Top Rated</span><strong>Customer Favorites</strong></a></div>",
+            "type_preset": "rte",
+            "alignment": "center",
+            "width": "100%"
+          }
+        }
+      },
+      "block_order": ["offer_text"],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 8,
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "background_media": "none",
+        "border": "none",
+        "padding-block-start": 10,
+        "padding-block-end": 44
+      }
     }
   },
   "order": [
+    "promo_strip",
     "hero_miami",
     "collections_miami",
+    "new_arrivals",
     "best_sellers",
     "brand_story",
     "why_choose",
     "testimonials",
-    "email_signup_miami"
+    "email_signup_miami",
+    "offer_tiles"
   ]
 }
